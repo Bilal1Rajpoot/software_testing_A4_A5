@@ -11,19 +11,34 @@ public class Assignment4_JUnit_test {
     public Assignment4_JUnit_test() {    
     }
     
+    @Test
+    public void path1(){
+        int fscMarks=90;
+        int entryTestMarks= 80;
+        boolean hafizQuran=true;
+        int expected_output=85;
+        assertEquals(expected_output, obj.scholarship(fscMarks, entryTestMarks, hafizQuran));
+    
+    }
     
     @Test
-    public void testPath(){
-        
-        // path 1
-        // 123
-        assertEquals(85, obj.scholarship(90, 80, true));
-        // path 2
-        // 1245
-        assertEquals(85, obj.scholarship(85, 70, false));
-        //path 3
-        // 1246
-        assertEquals(-1, obj.scholarship(60, 70, true));
+    public void path2(){
+        int fscMarks=85;
+        int entryTestMarks= 70;
+        boolean hafizQuran=false;
+        int expected_output=85;
+        assertEquals(expected_output, obj.scholarship(fscMarks, entryTestMarks, hafizQuran));
+    
     }
+    @Test
+    public void path3(){
+        int fscMarks=60;
+        int entryTestMarks= 70;
+        boolean hafizQuran=true;
+        int expected_output=-1;
+        assertEquals(expected_output, obj.scholarship(fscMarks, entryTestMarks, hafizQuran));
+    
+    }
+    
     
 }
